@@ -1,0 +1,27 @@
+<div style="margin-top: 80px;" class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-5">
+            <h1>Alteração de Produto</h1><br>
+            <form action="<?=$GLOBALS['project_index'];?>controllers/products/products.php" method="POST">
+                <input type="hidden" name="action" value="edit">
+                <input type="hidden" name="id_product" value="<?=$product[0]['id_product'];?>">
+                <label class="form-label">Produto</label>
+                <input type="text" class="form-control" name="product_name" placeholder="Nome" value="<?=$product[0]['product_name'];?>"><br>
+                <label class="form-label">Fornecedor</label>
+                <input type="text" class="form-control" name="product_provider" placeholder="Email" value="<?=$product[0]['product_provider'];?>"><br>
+                <label class="form-label">Quantidade</label>
+                <input type="text" class="form-control" name="product_quantity" placeholder="Quantidade" value="<?=$product[0]['product_quantity'];?>"><br>
+                <label class="form-label">Data de Alteração</label>
+                <input type="text" class="form-control" name="product_datein" placeholder="AAAA-MM-DD" value="<?=$product[0]['product_datein'];?>"><br>
+                <div class="d-flex justify-content-around m-auto w-50">
+                    <div class="">
+                        <button class="btn btn-success">Editar <i class="bi bi-pencil-square"></i></button>
+                    </div>
+                    <div class="">
+                        <a href="admin.php?op=manager_product" class="btn btn-secondary">Voltar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

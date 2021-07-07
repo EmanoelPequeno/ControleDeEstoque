@@ -1,0 +1,17 @@
+<div style="margin-top: 100px;" class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-5">
+            <h1>Cadastro de Produtos</h1><br>
+            <form action="<?=$GLOBALS['project_index'];?>controllers/products/products.php" method="POST">
+                <input type="hidden" name="action" value="add">
+                <label class="form-label">Nome do Produto</label>
+                <input type="text" class="form-control" name="product_name" placeholder="Produto"><br>
+                <label class="form-label">Nome do Fornecedor</label>
+                <input type="text" class="form-control" name="product_provider" placeholder="Fornecedor"><br>
+                <label class="form-label">Quantidade</label>
+                <input type="text" class="form-control" name="product_quantity" placeholder="Quantidade"><br><br>
+                <button class="btn btn-success">Cadastrar <i class="bi bi-clipboard-check"></i></button>
+            </form>
+        </div>
+    </div>
+</div>

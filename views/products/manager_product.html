@@ -1,0 +1,31 @@
+<div style="margin-top: 150px;" class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-8">
+            <h1>Lista de Produtos</h1><br>
+            <table class="table">               
+                <thead>                    
+                    <th>Produto</th>
+                    <th>Fornecedor</th> 
+                    <th>Quantidade</th> 
+                    <th>Data de criação</th>                   
+                    <th>Ação</th>                   
+                </thead>
+                <tbody>
+                    <?php
+                        foreach($products as $product) {
+                    ?>
+                    <tr>
+                        <td><?=$product['product_name'];?></td>
+                        <td><?=$product['product_provider'];?></td> 
+                        <td><?=$product['product_quantity'];?></td> 
+                        <td><?=$product['product_datein'];?></td> 
+                        <td>
+                            <a href="?op=edit_product&id=<?=$product['id_product'];?>" class="btn btn-primary">Editar <i class="bi bi-pen"></i></a>
+                            <a type="button" class="btn btn-danger" href="?op=delete_product&id=<?=$product['id_product'];?>"> Excluir </a>
+                    </tr>   
+                    <?php } ?>
+                </tbody>
+            </table>              
+        </div>
+    </div>
+</div>

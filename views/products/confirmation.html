@@ -1,0 +1,16 @@
+<div style="margin-top: 100px;" class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div style="text-align: center;" class="col-5">
+            <h1>Deletar produto</h1><br>
+            <form action="<?=$GLOBALS['project_index'];?>controllers/products/products.php" method="POST">
+                <input type="hidden" name="action" value="delete">                
+                <input type="hidden" name="id_product" value="<?=$product[0]['id_product'];?>">                
+                <label class="form-label"><strong>Tem certeza que deseja <span style="color: red;">DELETAR</span> este produto? Essa operação não poderá ser desfeita.</strong></label><br><br>
+                <div class="buttons" name="buttons">
+                    <button class="btn btn-success" value="true">Sim </button>
+                    <a class="btn btn-secondary" href="?op=manager_product">Voltar </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
